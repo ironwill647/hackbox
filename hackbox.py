@@ -725,7 +725,7 @@ def banner():
 
 def quit():
     print(NEWLINE + "Quitting program..." + NEWLINE)
-    exit(0)
+    sys.exit(0)
 
 
 def menu():
@@ -770,12 +770,12 @@ def menu():
             aws_s3()
             menu()
         elif choice == 0:
-            quit()
+            sys.exit()
         else:
             print("Please enter the correct number")
             menu()
     except KeyboardInterrupt:
-        quit()
+        sys.exit()
     except Exception as error:
         traceback.print_exc()
         print(str(error))
